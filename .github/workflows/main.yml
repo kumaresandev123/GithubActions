@@ -1,0 +1,12 @@
+name: Test Push
+
+on: 
+  push:
+
+jobs:
+  TestPush:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: For test learn
+        run: echo "pushed successfully"
