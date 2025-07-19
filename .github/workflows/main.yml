@@ -23,4 +23,4 @@ jobs:
         run: python -c "import sys; print(sys.version)"
 
       - name: Run the python file
-        run: python "hello.py"
+        run: python "git action/hello.py"
