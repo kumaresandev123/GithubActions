@@ -1,14 +1,13 @@
-name: "for Dev to Prod"
+name: "Dev to Prod Merge"
 
 on:
   push:
     branches:
-      - dev
+      - dev  # 🔧 fixed from 'branch:' to 'branches:'
 
 jobs:
   merge:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out the repo
         uses: actions/checkout@v3
