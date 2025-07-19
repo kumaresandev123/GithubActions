@@ -3,7 +3,7 @@ name: "for Dev to Prod"
 on:
   push:
     branches:
-      - dev  
+      - dev
 
 jobs:
   merge:
@@ -24,7 +24,7 @@ jobs:
       - name: Run the python file
         run: python hello.py
 
-      - name: Code has no error so now push to Prod
+      - name: Code has no error so now to push 
         uses: devmasx/merge-branch@v1.4.0
         with:
           type: now
