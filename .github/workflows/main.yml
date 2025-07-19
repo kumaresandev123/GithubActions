@@ -3,6 +3,9 @@ name: Test Push
 on: 
   push:
 
+permissions:
+  contents: write  # ✅ Required for merging or pushing code
+
 jobs:
   TestPush:
     runs-on: ubuntu-latest
