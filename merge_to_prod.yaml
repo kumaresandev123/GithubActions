@@ -1,16 +1,17 @@
-name : "for Dev to Prod"
+name: "for Dev to Prod"
+
 on:
   push:
-  branch:
-    -dev
-  jobs :
-    merge:
-      runs-on : ubuntu-latest
+    branches:
+      - dev  
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
 
     steps:
-      - name : Check out the repo
+      - name: Check out the repo
         uses: actions/checkout@v3
-
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -23,7 +24,7 @@ on:
       - name: Run the python file
         run: python hello.py
 
-      - name: Code has no error so now to push 
+      - name: Code has no error so now push to Prod
         uses: devmasx/merge-branch@v1.4.0
         with:
           type: now
