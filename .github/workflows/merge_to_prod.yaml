@@ -3,7 +3,7 @@ name: "Dev to Prod Merge"
 on:
   push:
     branches:
-      - dev  # 🔧 fixed from 'branch:' to 'branches:'
+      - dev  
 
 jobs:
   merge:
@@ -28,6 +28,6 @@ jobs:
         with:
           type: now
           from_branch: dev
-          target_branch: prod
+          target_branch: main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
